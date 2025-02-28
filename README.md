@@ -39,7 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - [x] Section 1: Intro
 - [x] Section 2: App Creation & Basic Layout
-- [ ] Section 3: Database, Prisma & Product Display
+- [x] Section 3: Database, Prisma & Product Display -- Skipped deploying on Vercel [issue with importing GitHub project](https://github.com/vercel/vercel/discussions/5755)
 - [ ] Section 4:
 - [ ] Section 5:
 - [ ] Section 6:
