@@ -35,6 +35,24 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Prisma
+
+_TODO: Check if the phrasing is correct_
+
+After editing `schema.prisma`:
+
+1. Generate Prisma Client
+
+   `npx prisma generate`
+
+2. Create the migration to create the tables
+
+   ` npx prisma migrate dev --name [describe_the_changes]`
+
+To launch prisma studio:
+
+`npx prisma studio`
+
 ## Progress
 
 - [x] Section 1: Intro
