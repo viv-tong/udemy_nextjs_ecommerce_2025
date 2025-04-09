@@ -13,6 +13,7 @@ import { hashSync } from "bcrypt-ts-edge";
 import { prisma } from "@/db/prisma";
 import { formatError } from "../utils";
 import { ShippingAddress } from "@/types";
+import { z } from "zod";
 
 // Sign in the user with credentials
 export async function signInWithCredentials(
@@ -139,6 +140,7 @@ export async function updateProfile(user: { name: string; email: string }) {
         id: session?.user?.id,
       },
     });
+
     if (!currentUser) throw new Error("User not found");
 
     await prisma.user.update({
@@ -149,6 +151,11 @@ export async function updateProfile(user: { name: string; email: string }) {
         name: user.name,
       },
     });
+
+    return {
+      success: true,
+      message: "User updated successfully",
+    };
   } catch (error) {
     return { success: false, message: formatError(error) };
   }
